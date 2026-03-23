@@ -1,0 +1,20 @@
+title: Megatron Bridge 文档 - 简体中文版
+description: NVIDIA NeMo Megatron Bridge 官方文档简体中文版
+theme: jekyll-theme-cayman
+lang: zh-CN
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+
+# 允许所有文件
+include:
+  - "*.md"
+  - "**/*.md"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
