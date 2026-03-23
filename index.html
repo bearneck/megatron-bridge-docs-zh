@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megatron Bridge 文档 - 简体中文版</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0d1117; color: #c9d1d9; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #1a1f2e 0%, #16213e 100%);
+              border-bottom: 1px solid #21262d; padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 2.5em; color: #58a6ff; margin-bottom: 10px; }
+    header p { color: #8b949e; font-size: 1.1em; }
+    .badge { display: inline-block; background: #238636; color: #fff;
+               padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-top: 10px; }
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px;
+                  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .section { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; }
+    .section h2 { font-size: 1.2em; color: #58a6ff; margin-bottom: 16px;
+                   padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+    .section ul { list-style: none; }
+    .section ul li { margin: 8px 0; }
+    .section ul li a { color: #c9d1d9; text-decoration: none; display: flex;
+                         align-items: center; gap: 8px; padding: 6px 10px;
+                         border-radius: 6px; transition: all 0.2s; font-size: 0.95em; }
+    .section ul li a:before { content: "📄"; font-size: 0.9em; }
+    .section ul li a:hover { background: #21262d; color: #58a6ff; transform: translateX(4px); }
+    footer { text-align: center; padding: 40px 20px; color: #8b949e; font-size: 0.9em;
+              border-top: 1px solid #21262d; margin-top: 40px; }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 Megatron Bridge 文档</h1>
+    <p>NVIDIA NeMo Megatron Bridge 官方文档 · 简体中文版</p>
+    <span class="badge">🤖 由 DeepSeek AI 自动翻译</span>
+  </header>
+  <div class="container">
+    <div class="section"><h2>📚 总览文档</h2><ul>
+  <li><a href="docs/README">Readme</a></li>
+  <li><a href="docs/adding-new-models">Adding New Models</a></li>
+  <li><a href="docs/bridge-guide">Bridge Guide</a></li>
+  <li><a href="docs/bridge-rl-integration">Bridge Rl Integration</a></li>
+  <li><a href="docs/bridge-tech-details">Bridge Tech Details</a></li>
+  <li><a href="docs/documentation">Documentation</a></li>
+  <li><a href="docs/index">Index</a></li>
+  <li><a href="docs/megatron-lm-to-megatron-bridge">Megatron Lm To Megatron Bridge</a></li>
+  <li><a href="docs/modelopt/README">Readme</a></li>
+  <li><a href="docs/modelopt/quantization">Quantization</a></li>
+  <li><a href="docs/models/README">Readme</a></li>
+  <li><a href="docs/models/llm/README">Readme</a></li>
+  <li><a href="docs/models/llm/deepseek-v2">Deepseek V2</a></li>
+  <li><a href="docs/models/llm/deepseek-v3">Deepseek V3</a></li>
+  <li><a href="docs/models/llm/gemma2">Gemma2</a></li>
+  <li><a href="docs/models/llm/gemma3">Gemma3</a></li>
+  <li><a href="docs/models/llm/glm45">Glm45</a></li>
+  <li><a href="docs/models/llm/gpt-oss">Gpt Oss</a></li>
+  <li><a href="docs/models/llm/index">Index</a></li>
+  <li><a href="docs/models/llm/llama-nemotron">Llama Nemotron</a></li>
+  <li><a href="docs/models/llm/llama3">Llama3</a></li>
+  <li><a href="docs/models/llm/mistral">Mistral</a></li>
+  <li><a href="docs/models/llm/moonlight">Moonlight</a></li>
+  <li><a href="docs/models/llm/nemotron3-super">Nemotron3 Super</a></li>
+  <li><a href="docs/models/llm/nemotron3">Nemotron3</a></li>
+  <li><a href="docs/models/llm/nemotronh">Nemotronh</a></li>
+  <li><a href="docs/models/llm/olmoe">Olmoe</a></li>
+  <li><a href="docs/models/llm/qwen">Qwen</a></li>
+  <li><a href="docs/models/vlm/README">Readme</a></li>
+  <li><a href="docs/models/vlm/gemma3-vl">Gemma3 Vl</a></li>
+  <li><a href="docs/models/vlm/glm-45v">Glm 45V</a></li>
+  <li><a href="docs/models/vlm/index">Index</a></li>
+  <li><a href="docs/models/vlm/ministral3">Ministral3</a></li>
+  <li><a href="docs/models/vlm/nemotron-nano-v2-vl">Nemotron Nano V2 Vl</a></li>
+  <li><a href="docs/models/vlm/qwen2.5-vl">Qwen2.5 Vl</a></li>
+  <li><a href="docs/models/vlm/qwen3-vl">Qwen3 Vl</a></li>
+  <li><a href="docs/models/vlm/qwen35-vl">Qwen35 Vl</a></li>
+  <li><a href="docs/nemo2-migration-guide">Nemo2 Migration Guide</a></li>
+  <li><a href="docs/parallelisms">Parallelisms</a></li>
+  <li><a href="docs/performance-guide">Performance Guide</a></li>
+  <li><a href="docs/performance-summary">Performance Summary</a></li>
+  <li><a href="docs/recipe-usage">Recipe Usage</a></li>
+  <li><a href="docs/releases/README">Readme</a></li>
+  <li><a href="docs/releases/changelog">Changelog</a></li>
+  <li><a href="docs/releases/known-issues">Known Issues</a></li>
+  <li><a href="docs/releases/software-versions">Software Versions</a></li>
+  <li><a href="docs/skills-index">Skills Index</a></li>
+  <li><a href="docs/training/README">Readme</a></li>
+  <li><a href="docs/training/activation-recomputation">Activation Recomputation</a></li>
+  <li><a href="docs/training/attention-optimizations">Attention Optimizations</a></li>
+  <li><a href="docs/training/callbacks">Callbacks</a></li>
+  <li><a href="docs/training/checkpointing">Checkpointing</a></li>
+  <li><a href="docs/training/communication-overlap">Communication Overlap</a></li>
+  <li><a href="docs/training/config-container-overview">Config Container Overview</a></li>
+  <li><a href="docs/training/cpu-offloading">Cpu Offloading</a></li>
+  <li><a href="docs/training/cuda-graphs">Cuda Graphs</a></li>
+  <li><a href="docs/training/distillation">Distillation</a></li>
+  <li><a href="docs/training/entry-points">Entry Points</a></li>
+  <li><a href="docs/training/hybrid-context-parallel">Hybrid Context Parallel</a></li>
+  <li><a href="docs/training/logging">Logging</a></li>
+  <li><a href="docs/training/megatron-fsdp">Megatron Fsdp</a></li>
+  <li><a href="docs/training/mixed-precision">Mixed Precision</a></li>
+  <li><a href="docs/training/multi-token-prediction">Multi Token Prediction</a></li>
+  <li><a href="docs/training/optimizer-scheduler">Optimizer Scheduler</a></li>
+  <li><a href="docs/training/packed-sequences">Packed Sequences</a></li>
+  <li><a href="docs/training/peft">Peft</a></li>
+  <li><a href="docs/training/profiling">Profiling</a></li>
+  <li><a href="docs/training/pruning">Pruning</a></li>
+  <li><a href="docs/training/resiliency">Resiliency</a></li>
+  <li><a href="docs/training/training-loop-settings">Training Loop Settings</a></li>
+</ul></div>
+
+  </div>
+  <footer>
+    <p>原始文档来源：<a href="https://github.com/NVIDIA-NeMo/Megatron-Bridge" target="_blank">NVIDIA-NeMo/Megatron-Bridge</a>
+    · 中文版仓库：<a href="https://github.com/bearneck/megatron-bridge-docs-zh" target="_blank">bearneck/megatron-bridge-docs-zh</a></p>
+    <p style="margin-top:8px">本站由 GitHub Pages 托管 · 翻译时间：2026-03-23</p>
+  </footer>
+</body>
+</html>
